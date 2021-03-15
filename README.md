@@ -59,13 +59,13 @@ python split_train_val.py
 ```
 
 ## <a name="4"></a> 4. Pretrained Models
-Please download the [*pretrained instance segmentation model*](https://drive.google.com/drive/folders/1maq8s8I_8RcfIoTaenJjJyhSuipDIBM1?usp=sharing) and place into the folder like this.
+Please download the [*pretrained instance segmentation model*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
 ```
 This Repository
 |--checkpoints
     |--model_insseg-000000512.pth
 ```
-Pretrained model for [*referring model with gru encoder*](https://drive.google.com/drive/folders/1maq8s8I_8RcfIoTaenJjJyhSuipDIBM1?usp=sharing) and place into the folder like this.
+Pretrained model for [*referring model with gru encoder*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
 ```
 This Repository
 |--checkpoints
