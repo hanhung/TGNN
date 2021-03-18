@@ -38,12 +38,16 @@ For the Scannet Dataset please go to https://github.com/ScanNet/ScanNet and fill
 ### ScanRefer Download
 For the ScanRefer Dataset please go to https://github.com/daveredrum/ScanRefer and fill out the agreement form to download the dataset.
 
+### Glove Embeddings
+Download the [*preprocessed glove embeddings*](http://kaldir.vc.in.tum.de/glove.p) from [*ScanRefer*](https://github.com/daveredrum/ScanRefer).
+
 ## <a name="2"></a> 2. Data Organization
 ```
 scannet_data
 |--scans
 
 This Repository
+|--glove.p
 |--ScanRefer
     |--Files from ScanRefer download
 ```
