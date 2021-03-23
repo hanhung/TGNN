@@ -96,11 +96,6 @@ def batch_train(batch, model, optimizer, batch_size):
         obj_gt = batch['lang_objID'][i][rand_idx].unsqueeze(-1).cuda() == obj_id.cuda()
         obj_gt = obj_gt.float().argmax(-1)
 
-        #--------------True if same name with the refering object------------------
-        obj_name = batch['ins_names'][i][obj_id]
-        same_obj_gt = np.expand_dims(batch['lang_objname'][i][rand_idx], -1) == obj_name
-        same_obj_gt = torch.from_numpy(same_obj_gt).float().cuda()
-
         total_pred += ttl_score.shape[0]
         total_ttl_correct += (ttl_score.argmax(-1) == obj_gt).sum()
 

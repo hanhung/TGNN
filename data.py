@@ -42,7 +42,6 @@ with open(GLOVE_PICKLE, 'rb') as f:
 
 # Load the ScanRefer dataset
 scanrefer = json.load(open('ScanRefer/ScanRefer_filtered_train.json'))
-all_instance_names = json.load(open('ScanRefer/ScanRefer_InstanceNames.json'))
 
 lang = {}
 for i, data in enumerate(scanrefer):
@@ -105,7 +104,6 @@ def trainMerge(tbl):
 
     batch_ref_lbl=[]
     for idx,scene_id in enumerate(tbl):
-        instance_names = all_instance_names[scene_id] 
         scene_dict = lang[scene_id]
         refer_idxs = lang[scene_id]['idx']
         lang_feat=[]
@@ -179,7 +177,6 @@ def trainMerge(tbl):
         ins_labels.append(torch.from_numpy(d.astype(int)))
         num_points.append(a.shape[0])
         scene_names.append(scene_id)
-        batch_ins_names.append(np.array(instance_names))
 
         ref_lbl = (ins_labels[-1].unsqueeze(-1)) == lang_objID
         batch_ref_lbl.append(ref_lbl.long())
@@ -193,7 +190,6 @@ def trainMerge(tbl):
                   'y_ins': ins_labels.long(),
                   'num_points': num_points,
                   'names': scene_names,
-                  'ins_names': batch_ins_names,
                   'lang_feat': batch_lang_feat,
                   'lang_len': batch_lang_len,
                   'lang_objID': batch_lang_objID,
