@@ -251,7 +251,6 @@ def trainMerge(tbl):
     labels=torch.cat(labels,0)
     ins_labels=torch.cat(ins_labels,0)
     coords = torch.cat(coords,0)
-    #point_ids = torch.cat(point_ids, 0)
     batch_data = {'x': [locs,feats], 
                   'y': labels.long(),
                   'id': tbl,
@@ -272,7 +271,6 @@ def trainMerge(tbl):
 print (len(loader_list))
 
 val_data_loader = torch.utils.data.DataLoader(
-    #list(range(len(scanrefer))),
     loader_list, 
     batch_size=batch_size,
     collate_fn=trainMerge,
