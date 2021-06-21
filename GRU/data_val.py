@@ -18,8 +18,8 @@ type2class = {'cabinet':0, 'bed':1, 'chair':2, 'sofa':3, 'table':4, 'door':5,
 
 nyu40ids = np.array([3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40])
 
-SCANNET_V2_TSV = '../scannet_data/meta_data/scannetv2-labels.combined.tsv' 
-scanrefer = json.load(open('ScanRefer/ScanRefer_filtered_val.json'))
+SCANNET_V2_TSV = '../../scannet_data/meta_data/scannetv2-labels.combined.tsv' 
+scanrefer = json.load(open('../ScanRefer/ScanRefer_filtered_val.json'))
 
 def get_raw2label():
 	# mapping
@@ -97,7 +97,7 @@ def get_unique_multiple_lookup(raw2label):
 raw2label = get_raw2label()
 unique_multiple_lookup = get_unique_multiple_lookup(raw2label)
 
-GLOVE_PICKLE = 'glove.p'
+GLOVE_PICKLE = '../glove.p'
 
 # Load the preprocessed data
 val_3d = {}
@@ -107,7 +107,7 @@ def load_data(name):
     data = torch.load(name[0])
     return data, scene_name
 for x in torch.utils.data.DataLoader(
-        glob.glob('val/*.pth'),
+        glob.glob('../val/*.pth'),
         collate_fn=load_data, num_workers=mp.cpu_count()):
     val_3d[x[1]] = x[0]
 print('Validating examples:', len(val_3d))
@@ -117,7 +117,7 @@ with open(GLOVE_PICKLE, 'rb') as f:
     glove = pickle.load(f)
 
 # Load the ScanRefer dataset
-scanrefer = json.load(open('ScanRefer/ScanRefer_filtered_val.json'))
+scanrefer = json.load(open('../ScanRefer/ScanRefer_filtered_val.json'))
 
 lang = {}
 for i, data in enumerate(scanrefer):

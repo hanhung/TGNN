@@ -1,6 +1,6 @@
 # TGNN for Referring 3D Instance Segmentation
 
-This is the initial release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf). Currently the code includes training for the referering model with GRU encoder, we will finish uploading the rest of the code and pretrained models soon (ETA. end of March).
+This is the initial release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf). Currently the code includes training for the referering model with GRU encoder, we will finish uploading the rest of the code and pretrained models soon.
 
 <table width="100%" border=1 frame=void rules=cols>
   <tr>
@@ -66,27 +66,31 @@ python split_train_val.py
 Please download the [*pretrained instance segmentation model*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
 ```
 This Repository
-|--checkpoints
-    |--model_insseg-000000512.pth
+|--GRU
+    |--checkpoints
+        |--model_insseg-000000512.pth
 ```
 Pretrained model for [*referring model with gru encoder*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
 ```
 This Repository
-|--checkpoints
-    |--gru
-      |--models
-        |--gru-000000032.pth
+|--GRU
+    |--checkpoints
+        |--gru
+            |--models
+                |--gru-000000032.pth
 ```
 
 ## <a name="5"></a> 5. Training
 Train the referring model with GRU encoder. (Note that we train with 2 GTX 1080Tis and Batchsize 8)
 ```
+cd GRU/
 python unet_gru.py
 ```
 
 ## <a name="6"></a> 6. Validation
 Validate referring model with GRU encoder.
 ```
+cd GRU/
 python unet_gru_val.py
 ```
 

@@ -13,11 +13,11 @@ import torch, numpy as np, glob, math, torch.utils.data, scipy.ndimage, multipro
 
 from config import *
 
-GLOVE_PICKLE = 'glove.p'
+GLOVE_PICKLE = '../glove.p'
 
 # Mapping from object names to id
 remap = {}
-f = open('labelids.txt', 'r')
+f = open('../labelids.txt', 'r')
 NYU_CLASS_IDS = f.readlines()[2:]
 for i, line in enumerate(NYU_CLASS_IDS):
     obj_name = line.strip().split('\t')[-1]
@@ -30,7 +30,7 @@ def load_data(name):
     scene_name = name[0][idx:idx+12]
     return torch.load(name[0]), scene_name
 for x in torch.utils.data.DataLoader(
-        glob.glob('train/*.pth'),
+        glob.glob('../train/*.pth'),
         collate_fn=load_data, num_workers=mp.cpu_count()):
     train_3d[x[1]] = x[0]
 print('Training examples:', len(train_3d))
@@ -41,7 +41,7 @@ with open(GLOVE_PICKLE, 'rb') as f:
     glove = pickle.load(f)
 
 # Load the ScanRefer dataset
-scanrefer = json.load(open('ScanRefer/ScanRefer_filtered_train.json'))
+scanrefer = json.load(open('../ScanRefer/ScanRefer_filtered_train.json'))
 
 lang = {}
 for i, data in enumerate(scanrefer):
