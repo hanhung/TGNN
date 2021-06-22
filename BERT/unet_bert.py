@@ -42,7 +42,7 @@ def _init_():
     os.system('cp util.py checkpoints' + '/' + args.exp_name + '/' + 'util.py')
     os.system('cp unet_bert.py checkpoints' + '/' + args.exp_name + '/' + 'unet_bert.py')
     os.system('cp data_bert.py checkpoints' + '/' + args.exp_name + '/' + 'data_bert.py')
-    os.system('cp model_bert1.py checkpoints' + '/' + args.exp_name + '/' + 'model_bert.py')
+    os.system('cp model_bert.py checkpoints' + '/' + args.exp_name + '/' + 'model_bert.py')
     os.system('cp config_bert.py checkpoints' + '/' + args.exp_name + '/' + 'config_bert.py')
 
 _init_()
