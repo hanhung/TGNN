@@ -27,7 +27,7 @@ from model_bert import *
 import data_bert_val as data
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--restore_epoch', type=int, default=80, metavar='N', help='Epoch of model to restore')
+parser.add_argument('--restore_epoch', type=int, default=64, metavar='N', help='Epoch of model to restore')
 parser.add_argument('--exp_name', type=str, default='bert', metavar='N', help='Name of the experiment')
 args= parser.parse_args()
 
