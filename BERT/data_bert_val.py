@@ -9,7 +9,7 @@ Dataloader for validation (BERT)
 
 import torch, numpy as np, glob, math, torch.utils.data, scipy.ndimage, multiprocessing as mp, time, json, pickle, logging
 
-from config_bert import *
+from config_bert_val import *
 from transformers import *
 
 GLOVE_PICKLE = '../glove.p'
