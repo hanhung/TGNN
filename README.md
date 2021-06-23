@@ -69,6 +69,9 @@ This Repository
 |--GRU
     |--checkpoints
         |--model_insseg-000000512.pth
+|--BERT
+    |--checkpoints
+        |--model_insseg-000000512.pth
 ```
 Pretrained model for [*referring model with gru encoder*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
 ```
@@ -86,6 +89,11 @@ Train the referring model with GRU encoder. (Note that we train with 2 GTX 1080T
 cd GRU/
 python unet_gru.py
 ```
+Train the referring model with BERT encoder. (Note that we train with 1 V100 and Batchsize 16)
+```
+cd BERT/
+python unet_bert.py
+```
 
 ## <a name="6"></a> 6. Validation
 Validate referring model with GRU encoder.
@@ -93,13 +101,18 @@ Validate referring model with GRU encoder.
 cd GRU/
 python unet_gru_val.py
 ```
+Validate referring model with BERT encoder.
+```
+cd BERT/
+python unet_bert_val.py
+```
+
 
 ## <a name="7"></a> 7. To-Do
 
-- [ ] Add referring model training code with BERT encoder.
-- [ ] Add training code for the instance segmentation model.
+- [x] Add referring model training code with BERT encoder.
+- [x] Add training code for the instance segmentation model.
 - [ ] Add visualization scripts.
-- [ ] Clean up code and add more comments.
 
 ## <a name="8"></a> 8. Acknowledgements
 
