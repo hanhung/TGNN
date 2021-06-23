@@ -27,7 +27,7 @@ from model_bert import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--lr', type=float, default=1e-3, help='Initial learning rate')
-parser.add_argument('--epochs', type=int, default=32, help='Number of epochs')
+parser.add_argument('--epochs', type=int, default=80, help='Number of epochs')
 parser.add_argument('--exp_name', type=str, default='bert', metavar='N', help='Name of the experiment')
 args= parser.parse_args()
 

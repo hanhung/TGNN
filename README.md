@@ -82,6 +82,15 @@ This Repository
             |--models
                 |--gru-000000032.pth
 ```
+Pretrained model for [*referring model with bert encoder*](https://www.dropbox.com/sh/u2mozpyzycwomwc/AABbYCbZPKGu8foT3bQc_jdna?dl=0) and place into the folder like this.
+```
+This Repository
+|--BERT
+    |--checkpoints
+        |--bert
+            |--models
+                |--bert-000000064.pth
+```
 
 ## <a name="5"></a> 5. Training
 Train the referring model with GRU encoder. (Note that we train with 2 GTX 1080Tis and Batchsize 8)
