@@ -1,6 +1,6 @@
 # TGNN for Referring 3D Instance Segmentation
 
-This is the initial release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf). Currently the code includes training for the referering model with GRU encoder, we will finish uploading the rest of the code and pretrained models soon.
+This is the initial release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf).
 
 <table width="100%" border=1 frame=void rules=cols>
   <tr>
@@ -116,13 +116,6 @@ cd BERT/
 python unet_bert_val.py
 ```
 
-
-## <a name="7"></a> 7. To-Do
-
-- [x] Add referring model training code with BERT encoder.
-- [x] Add training code for the instance segmentation model.
-- [ ] Add visualization scripts.
-
-## <a name="8"></a> 8. Acknowledgements
+## <a name="7"></a> 7. Acknowledgements
 
 Our dataloader and training implementations are modified from https://github.com/facebookresearch/SparseConvNet and https://github.com/daveredrum/ScanRefer, please go check out their repositories for sparseconvolution and 3D referring object localization implementations respectively. We would also like to thank the teams behind Scannet and ScanRefer for providing their dataset.
