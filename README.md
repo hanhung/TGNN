@@ -1,6 +1,6 @@
 # TGNN for Referring 3D Instance Segmentation
 
-This is the initial release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf).
+This is the code release for the paper [*Text-Guided Graph Neural Networks for Referring 3D Instance Segmentation*](https://www.aaai.org/AAAI21Papers/AAAI-4433.HuangP.pdf).
 
 <table width="100%" border=1 frame=void rules=cols>
   <tr>
